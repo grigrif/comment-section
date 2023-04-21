@@ -1,0 +1,78 @@
+/* - Moderate blue: hsl(238, 40%, 52%)
+- Soft Red: hsl(358, 79%, 66%)
+- Light grayish blue: hsl(239, 57%, 85%)
+- Pale red: hsl(357, 100%, 86%)
+
+### Neutral
+
+- Dark blue: hsl(212, 24%, 26%)
+- Grayish Blue: hsl(211, 10%, 45%)
+- Light gray: hsl(223, 19%, 93%)
+- Very light gray: hsl(228, 33%, 97%)
+- White: hsl(0, 0%, 100%) */
+
+* {
+    font-family: 'Rubik', sans-serif;
+    --moderate-blue: hsl(238, 40%, 52%);
+    --soft-red: hsl(358, 79%, 66%);
+    --light-grayish-blue: hsl(239, 57%, 85%);
+    --pale-red: hsl(357, 100%, 86%);
+    --dark-blue: hsl(212, 24%, 26%);
+    --grayish-blue: hsl(211, 10%, 45%);
+    --light-gray: hsl(223, 19%, 93%);
+    --very-light-gray: hsl(228, 33%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --small-padding: 0.5em;
+    --medium-padding: 1em;
+    --large-padding: 2em; 
+}
+
+body {
+    background-color: var(--very-light-gray);
+    margin: 0;
+}
+button:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+button {
+    opacity: 1;
+    visibility: visible;
+
+    transition: all 100ms ease;
+}
+
+.obstruct {
+    background-color: rgba(128, 128, 128, 0.4);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    justify-content: center;
+}
+
+#content {
+    background-color: var(--very-light-gray);
+
+    padding: var(--medium-padding);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 1.2rem;
+        --small-padding: 0.7em!important;
+
+        --medium-padding: 2em!important;
+        --large-padding: 4em!important; 
+        padding: 3em 0;
+    }
+}
+
+#content {
+    max-width: 64rem;
+    margin: auto;
+}
